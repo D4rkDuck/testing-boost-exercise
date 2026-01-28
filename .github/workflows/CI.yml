@@ -9,7 +9,7 @@ jobs:
         - name: "Install style checker clang"
           run: sudo apt-get install -y clang-format
         - name: "Run style check"
-          run: clang-format --dry-run -werror $(find src tests -name "*.cpp" -o -name "*.hpp")
+          run: clang-format --dry-run -Werror $(find src tests -name "*.cpp" -o -name "*.hpp")
   build:
     runs-on: ubuntu-latest
     steps:
@@ -22,9 +22,8 @@ jobs:
         run: sudo apt-get install -y libboost-test-dev
       - name: "Start build process with creating build folder"
         run: mkdir build
-      - name: "Step into build folder"
-        run: cd build
       - name: "Run cmake"
+        working-directory: build
         run: cmake ..
       - name: "Run make"
         run: make -j
