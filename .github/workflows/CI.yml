@@ -26,6 +26,7 @@ jobs:
         working-directory: build
         run: cmake ..
       - name: "Run make"
+        working-directory: build
         run: make -j
       - name: "Upload build Artifact for Tests"
         uses: actions/upload-artifact@v4
