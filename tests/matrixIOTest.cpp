@@ -12,11 +12,11 @@ struct MatrixIOFixture {
     expectedMatrix << 0.680375, 0.59688, -0.329554,
         -0.211234, 0.823295, 0.536459,
         0.566198, -0.604897, -0.444451;
-    expectedMatrixSize = 3;
+    expectedMatrixSize << 3;
   }
 
   const int expectedMatrixSize;
-  MatrixXd expectedMatrix;
+  const MatrixXd expectedMatrix;
 };
 
 BOOST_FIXTURE_TEST_SUITE(matrixIOTests, MatrixIOFixture)
