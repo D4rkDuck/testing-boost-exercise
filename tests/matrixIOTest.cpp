@@ -15,7 +15,7 @@ struct MatrixIOFixture {
     expectedMatrixSize = 3;
   }
 
-  int expectedMatrixSize;
+  const int expectedMatrixSize;
   MatrixXd expectedMatrix;
 };
 
