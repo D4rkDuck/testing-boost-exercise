@@ -51,7 +51,7 @@ jobs:
       - name: "Install boost"
         run: sudo apt-get install -y libboost-test-dev
       - name: "Run Tests"
-        working-directory: build
         run: |
-          chmod +x /testsidemade
+          chmod +x build/testsidemade
+          cd build
           ctest
