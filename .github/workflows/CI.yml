@@ -50,5 +50,5 @@ jobs:
       - name: "Install boost"
         run: sudo apt-get install -y libboost-test-dev
       - name: "Run Tests"
-        working-directory: build-data
+        working-directory: build
         run: make test
