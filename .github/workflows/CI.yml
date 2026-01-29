@@ -52,4 +52,4 @@ jobs:
         run: sudo apt-get install -y libboost-test-dev
       - name: "Run Tests"
         working-directory: build
-        run: make test
+        run: ctest
