@@ -53,5 +53,5 @@ jobs:
       - name: "Run Tests"
         working-directory: build
         run: |
-          chmod +x build/testsidemade
+          chmod +x /testsidemade
           ctest
