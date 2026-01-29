@@ -31,7 +31,7 @@ jobs:
       - name: "Upload build Artifact for Tests"
         uses: actions/upload-artifact@v4
         with:
-          name: build-data
+          name: build
           path: build
           retention-days: 1
   test:
@@ -42,7 +42,7 @@ jobs:
       - name: "Download build Artifact"
         uses: actions/download-artifact@v4
         with:
-          name: build-data
+          name: build
       - name: "Install eigen"
         run: sudo apt-get install -y libeigen3-dev
       - name: "Install yaml"
@@ -50,5 +50,5 @@ jobs:
       - name: "Install boost"
         run: sudo apt-get install -y libboost-test-dev
       - name: "Run Tests"
-        working-directory: build
+        working-directory: build-data
         run: make test
